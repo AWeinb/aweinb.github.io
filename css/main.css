@@ -1,0 +1,832 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Windsong';
+  src: url('./fonts/Windsong/windsong-webfont.eot');
+  src: url('./fonts/Windsong/windsong-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/Windsong/windsong-webfont.woff2') format('woff2'),
+    url('./fonts/Windsong/windsong-webfont.woff') format('woff'),
+    url('./fonts/Windsong/windsong-webfont.ttf') format('truetype'),
+    url('./fonts/Windsong/windsong-webfont.svg#svgFontName') format('svg');
+}
+@font-face {
+  font-family: 'Bahiana';
+  src: url('./fonts/Bahiana-Regular/bahiana-regular-webfont.eot');
+  src: url('./fonts/Bahiana-Regular/bahiana-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/Bahiana-Regular/bahiana-regular-webfont.woff2') format('woff2'),
+    url('./fonts/Bahiana-Regular/bahiana-regular-webfont.woff') format('woff'),
+    url('./fonts/Bahiana-Regular/bahiana-regular-webfont.ttf')
+      format('truetype'),
+    url('./fonts/Bahiana-Regular/bahiana-regular-webfont.svg#svgFontName')
+      format('svg');
+}
+@font-face {
+  font-family: 'Artifika';
+  src: url('./fonts/Artifika-Regular/artifika-regular-webfont.eot');
+  src: url('./fonts/Artifika-Regular/artifika-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/Artifika-Regular/artifika-regular-webfont.woff2')
+      format('woff2'),
+    url('./fonts/Artifika-Regular/artifika-regular-webfont.woff') format('woff'),
+    url('./fonts/Artifika-Regular/artifika-regular-webfont.ttf')
+      format('truetype'),
+    url('./fonts/Artifika-Regular/artifika-regular-webfont.svg#svgFontName')
+      format('svg');
+}
+@font-face {
+  font-family: 'Exo';
+  src: url('./fonts/Exo-Regular/exo-regular-webfont.eot');
+  src: url('./fonts/Exo-Regular/exo-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/Exo-Regular/exo-regular-webfont.woff2') format('woff2'),
+    url('./fonts/Exo-Regular/exo-regular-webfont.woff') format('woff'),
+    url('./fonts/Exo-Regular/exo-regular-webfont.ttf') format('truetype'),
+    url('./fonts/Exo-Regular/exo-regular-webfont.svg#svgFontName') format('svg');
+}
+
+h2 {
+  font-family: 'Bahiana';
+  font-size: 60pt;
+  line-height: 100%;
+  text-shadow: rgba(255, 255, 255, 0.99) 2px 1px 0px;
+  margin: 0;
+  color: #1c140d;
+  text-overflow: ellipsis;
+}
+h3 {
+  font-family: 'Artifika';
+  font-size: 20pt;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 0px;
+  margin: 0;
+  color: #1c140d;
+}
+h4 {
+  font-family: 'Windsong';
+  font-size: 20pt;
+}
+a {
+  font-family: 'Exo';
+  color: #fff;
+  outline: none;
+  margin: 0;
+  font-weight: normal;
+  font-size: 18pt;
+  text-decoration: none;
+}
+p {
+  color: #fff;
+  font-family: 'Exo';
+  font-size: 18pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+span {
+  color: #fff;
+  font-family: 'Exo';
+  font-size: 18pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 0;
+  line-height: 36pt;
+}
+
+/* ==========================================================================
+   Main settings.
+   ========================================================================== */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #2a363b;
+}
+body::before,
+body::after {
+  z-index: -1;
+  content: '';
+  width: 75%;
+  max-width: 1170px;
+  position: fixed;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+body::before {
+  top: 0;
+  height: 70%;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  transition: background-color 2s;
+  -o-transition-property: background-color;
+  -o-transition-duration: 2s;
+}
+/*
+ * Different colors for the sliding area. Used with js.
+ */
+body.color-0::before {
+  background-color: #e84a5f;
+}
+body.color-1::before {
+  background-color: #63d076;
+}
+body.color-2::before {
+  background-color: #f69f4f;
+}
+body.color-3::before {
+  background-color: #6a4a99;
+}
+body.color-4::before {
+  background-color: #328b97;
+}
+body::after {
+  top: 70%;
+  height: 30%;
+  background-color: #1b2326;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rotate {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* --- */
+/*
+ * Navigation styles.
+ */
+
+nav {
+  position: fixed;
+  z-index: 10;
+  right: 0px;
+  height: 100%;
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+}
+#nav-button {
+  display: none;
+  position: absolute;
+  top: 2%;
+  right: 125%;
+  height: 33px;
+  width: 33px;
+  background-color: #1c140d;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: thin solid #000;
+  box-shadow: 1px 0px 2px 0px #888;
+  text-align: center;
+}
+#nav-button img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  margin: 0;
+}
+nav ul {
+  margin-left: 30px;
+}
+nav ul li {
+  margin-top: 10px;
+}
+nav ul img {
+  height: 30px;
+  width: 30px;
+}
+
+/* --- */
+/*
+ * Common styles.
+ */
+
+.page {
+  background-image: url('../img/bg_small.png');
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 25px solid #1c140d;
+}
+@media only screen and (min-width: 1300px) {
+  .page {
+    background-image: url('../img/bg.png');
+  }
+}
+.page:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.page:nth-child(odd) {
+  background-color: #fffaf2;
+}
+.page .fast-fade {
+  transition: opacity 0.5s;
+}
+.page .medium-fade {
+  transition: opacity 1s;
+}
+.page .slow-fade {
+  transition: opacity 1.5s;
+}
+.page-base {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2%;
+}
+.page-block {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.page-block .left {
+  text-align: right;
+  padding-right: 1%;
+}
+.page-block .right {
+  text-align: left;
+  padding-left: 1%;
+}
+.page-block h2 {
+  text-shadow: rgba(255, 255, 255, 1) 2px 1px 0px;
+}
+.page-block .subheader {
+  font-size: 25pt;
+}
+.page-block img {
+  max-width: 800px;
+  max-height: 800px;
+}
+.page-block span {
+  background-color: #f65b4f;
+  box-shadow: 2px 2px 3px 1px #ccc;
+  padding: 5px;
+}
+.page-block p {
+  background-color: #f65b4f;
+  box-shadow: 2px 2px 3px 1px #ccc;
+  padding: 5px;
+}
+
+/*
+ * The front page styles.
+ */
+
+#frontpage {
+  background-image: url('../img/front_small.jpg');
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-bottom: 50px transparent;
+  box-shadow: inset 0px -1px 15px 0px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 1300px) {
+  #frontpage {
+    background-image: url('../img/front.jpg');
+  }
+}
+#frontpage h2 {
+  color: #fff;
+  font-size: 100pt;
+  margin-left: 10%;
+  text-shadow: rgba(0, 00, 00, 0.8) 0px 0px 5px;
+}
+#frontpage h3 {
+  color: #222;
+  font-family: 'Windsong';
+  font-size: 30pt;
+  font-stretch: ultra-expanded;
+  margin-left: 20%;
+  margin-top: 25px;
+  text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 0px;
+}
+#frontpage h4 {
+  color: #222;
+  margin: 0;
+  margin-left: 30%;
+  margin-top: 15px;
+  font-size: 25pt;
+  text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 0px;
+}
+#frontpage .footer {
+  position: relative;
+  top: -6%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  background-color: #1c140d;
+  background-image: url('../img/tex/bg-b.png');
+  border-top: 1px solid #000;
+  box-shadow: 0px -5px 10px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  overflow: hidden;
+}
+#frontpage .footer h4 {
+  font-family: 'Artifika';
+  color: rgba(230, 230, 230, 0.3);
+  font-size: 8pt;
+  margin: 0;
+  margin-top: 1%;
+  text-shadow: #000 1px 1px 1px;
+}
+.frontpage-block {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+/*
+ *
+ */
+
+#overview-page {
+  height: fit-content;
+}
+
+.overview-page-block {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 5%;
+  width: fit-content;
+}
+
+/* --- */
+
+.banner-page {
+  height: 500px;
+  background-color: #222 !important;
+  display: flex;
+}
+.banner-page div {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* --- */
+
+.header-page {
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-bottom: 50px solid #1c140d;
+}
+.header-page div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  *zoom: 1;
+  text-align: center;
+}
+.header-page div div {
+  width: 75%;
+  max-width: 1170px;
+  margin: auto;
+}
+.header-page h2 {
+  margin-bottom: 5%;
+}
+.header-page h3 {
+  margin-bottom: 10%;
+}
+.header-page p {
+  color: #f2f2f2;
+  background-color: #181e21;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 0px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 1% 3%;
+}
+.header-page span {
+  color: #f2f2f2;
+  background-color: #181e21;
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 1px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  padding: 1% 3%;
+}
+
+/* --- */
+/*
+ * Common sliding styles.
+ * 
+ * Special thanks to CodyHouse
+ *  [http://codyhouse.co/gem/icons-filling-effect/]
+ */
+
+.sliding-section {
+  height: auto;
+  min-height: 100%;
+  background-color: transparent !important;
+  background: none !important;
+}
+.sliding-head {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  padding-top: 15%;
+  *zoom: 1;
+  background-color: #181e21;
+  text-align: center;
+}
+.sliding-head div {
+  width: 75%;
+  max-width: 1170px;
+  background-color: #181e21;
+}
+.sliding-head div h2 {
+  color: #f2f2f2;
+  margin-bottom: 1%;
+  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0px;
+}
+.sliding-head div h3 {
+  color: #f2f2f2;
+  margin-bottom: 5%;
+  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0px;
+}
+.sliding-head div p {
+  color: #f2f2f2;
+  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 1px;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 1%;
+  background-color: #181e21;
+}
+
+.sliding-container {
+  width: 76%;
+  max-width: 1171px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.sliding-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.sliding {
+  min-height: 400px;
+  padding-bottom: 5%;
+}
+.sliding.left {
+  z-index: 2;
+  position: relative;
+  margin-left: 420px;
+  padding-left: 50px;
+  background-color: #2a363b;
+}
+.sliding.right {
+  z-index: 2;
+  position: relative;
+  margin-right: 420px;
+  padding-right: 50px;
+  background-color: #2a363b;
+}
+.sliding.left::before,
+.sliding.left::after {
+  content: '';
+  position: absolute;
+  width: 420px;
+  right: 100%;
+  z-index: 2;
+  padding: 0px 10px;
+}
+.sliding.right::before,
+.sliding.right::after {
+  content: '';
+  position: absolute;
+  width: 420px;
+  left: 100%;
+  z-index: 2;
+}
+.sliding::before {
+  top: 0;
+  height: 325px;
+  background-repeat: no-repeat;
+}
+.sliding::after {
+  top: 325px;
+  bottom: 0;
+  background-image: url('../img/sliding/bar.png');
+  background-repeat: repeat-y;
+}
+.sliding h3,
+.sliding p {
+  color: #f1f1f1;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
+  box-shadow: none;
+  -webkit-transition: color, 0.5s;
+  -moz-transition: color, 0.5s;
+  transition: color, 0.5s;
+}
+.sliding h3 {
+  margin-left: 25px;
+  background-color: transparent;
+}
+.sliding p {
+  padding: 25px;
+  background-color: #e84a5f;
+}
+.sliding.focus h3 {
+  color: white;
+}
+.sliding.focus p {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sliding.divider {
+  min-height: 150px;
+}
+.sliding.divider::before {
+  height: 150px;
+}
+.sliding.divider::after {
+  top: 150px;
+}
+
+/*
+*
+*/
+
+#impressum {
+  height: auto;
+  background-color: #f2f2f2;
+}
+#impressum a {
+  color: #000;
+  font-size: 12pt;
+}
+#impressum img {
+  height: 50px;
+  width: auto;
+}
+#impressum ul {
+  text-align: left;
+  margin-left: 1%;
+}
+#impressum ul img {
+  background-color: #aaa;
+  height: 25px;
+  width: auto;
+  margin-right: 20px;
+}
+#impressum h3 {
+  text-align: left;
+  margin: 0;
+  margin-bottom: 20px;
+}
+#impressum h4 {
+  font-family: 'Artifika';
+  font-size: small;
+  text-align: left;
+  margin: 0;
+  margin-top: 10px;
+}
+#impressum p {
+  color: #000;
+  text-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  text-align: left;
+  font-size: small;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media print,
+  (-o-min-device-pixel-ratio: 5/4),
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+
+  .ir a:after,
+  a[href^='javascript:']:after,
+  a[href^='#']:after {
+    content: '';
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

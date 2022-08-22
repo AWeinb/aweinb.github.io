@@ -1,0 +1,6 @@
+# robotstxt.org/
+
+User-agent: *
+Disallow: /about.html
+Disallow: /404.html
+Disallow: /projects/*

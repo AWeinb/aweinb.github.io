@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'danielbold';
+    src: url('../fonts/danielbd-webfont.eot');
+    src: url('../fonts/danielbd-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/danielbd-webfont.woff') format('woff'), url('../fonts/danielbd-webfont.ttf') format('truetype'), url('../fonts/danielbd-webfont.svg#danielbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    background-color: #3F342C;
+    background-image: url("../img/pattern.png");
+    background-repeat: repeat;
+}
+
+header {
+    margin: auto;
+    padding-top: 10%;
+    text-align: center;
+}
+
+header img {
+    opacity: 0.9;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+header img:hover {
+    opacity: 1;
+}
+
+body #msg {
+    margin: auto;
+}
+
+body #msg p {
+    text-align: center;
+    color: #fff;
+    font-family: 'danielbold';
+    font-size: 40pt;
+    text-shadow: 0 0 0.1em #d2c9b5;
+    opacity: 0.8;
+    cursor: default;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+body #msg p:hover {
+    opacity: 1;
+}
+
+.smallText {
+    font-size: 14pt;
+}
