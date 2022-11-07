@@ -152,6 +152,28 @@ span {
   line-height: 36pt;
 }
 
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 40pt;
+  }
+  h3 {
+    font-size: 14pt;
+  }
+  h4 {
+    font-size: 14pt;
+  }
+  a {
+    font-size: 12pt;
+  }
+  p {
+    font-size: 12pt;
+  }
+  span {
+    font-size: 12pt;
+    line-height: 24pt;
+  }
+}
+
 /* ==========================================================================
    Main settings.
    ========================================================================== */
@@ -301,7 +323,7 @@ nav ul img {
   overflow: hidden;
   border-bottom: 25px solid #1c140d;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   .page {
     background-image: url('../img/bg.png');
   }
@@ -351,10 +373,6 @@ nav ul img {
 .page-block .subheader {
   font-size: 25pt;
 }
-.page-block img {
-  max-width: 800px;
-  max-height: 800px;
-}
 .page-block span {
   background-color: #f65b4f;
   box-shadow: 2px 2px 3px 1px #ccc;
@@ -364,6 +382,20 @@ nav ul img {
   background-color: #f65b4f;
   box-shadow: 2px 2px 3px 1px #ccc;
   padding: 5px;
+}
+.page-block img {
+  max-width: 800px;
+  max-height: 800px;
+}
+
+@media screen and (max-width: 1400px) {
+  .page-block {
+    flex-direction: column;
+  }
+  .page-block img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 /*
@@ -378,7 +410,7 @@ nav ul img {
   border-bottom: 50px transparent;
   box-shadow: inset 0px -1px 15px 0px rgba(0, 0, 0, 0.5);
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   #frontpage {
     background-image: url('../img/front.jpg');
   }
@@ -432,6 +464,18 @@ nav ul img {
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  #frontpage h2 {
+    font-size: 50pt;
+  }
+  #frontpage h3 {
+    font-size: 20pt;
+  }
+  #frontpage h4 {
+    font-size: 15pt;
+  }
 }
 
 /*
@@ -506,143 +550,6 @@ nav ul img {
   padding: 1% 3%;
 }
 
-/* --- */
-/*
- * Common sliding styles.
- * 
- * Special thanks to CodyHouse
- *  [http://codyhouse.co/gem/icons-filling-effect/]
- */
-
-.sliding-section {
-  height: auto;
-  min-height: 100%;
-  background-color: transparent !important;
-  background: none !important;
-}
-.sliding-head {
-  width: 100%;
-  height: 100%;
-  padding: 5%;
-  padding-top: 15%;
-  *zoom: 1;
-  background-color: #181e21;
-  text-align: center;
-}
-.sliding-head div {
-  width: 75%;
-  max-width: 1170px;
-  background-color: #181e21;
-}
-.sliding-head div h2 {
-  color: #f2f2f2;
-  margin-bottom: 1%;
-  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0px;
-}
-.sliding-head div h3 {
-  color: #f2f2f2;
-  margin-bottom: 5%;
-  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0px;
-}
-.sliding-head div p {
-  color: #f2f2f2;
-  text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 1px;
-  box-shadow: none;
-  margin-bottom: 0;
-  padding: 1%;
-  background-color: #181e21;
-}
-
-.sliding-container {
-  width: 76%;
-  max-width: 1171px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-.sliding-container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.sliding {
-  min-height: 400px;
-  padding-bottom: 5%;
-}
-.sliding.left {
-  z-index: 2;
-  position: relative;
-  margin-left: 420px;
-  padding-left: 50px;
-  background-color: #2a363b;
-}
-.sliding.right {
-  z-index: 2;
-  position: relative;
-  margin-right: 420px;
-  padding-right: 50px;
-  background-color: #2a363b;
-}
-.sliding.left::before,
-.sliding.left::after {
-  content: '';
-  position: absolute;
-  width: 420px;
-  right: 100%;
-  z-index: 2;
-  padding: 0px 10px;
-}
-.sliding.right::before,
-.sliding.right::after {
-  content: '';
-  position: absolute;
-  width: 420px;
-  left: 100%;
-  z-index: 2;
-}
-.sliding::before {
-  top: 0;
-  height: 325px;
-  background-repeat: no-repeat;
-}
-.sliding::after {
-  top: 325px;
-  bottom: 0;
-  background-image: url('../img/sliding/bar.png');
-  background-repeat: repeat-y;
-}
-.sliding h3,
-.sliding p {
-  color: #f1f1f1;
-  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
-  box-shadow: none;
-  -webkit-transition: color, 0.5s;
-  -moz-transition: color, 0.5s;
-  transition: color, 0.5s;
-}
-.sliding h3 {
-  margin-left: 25px;
-  background-color: transparent;
-}
-.sliding p {
-  padding: 25px;
-  background-color: #e84a5f;
-}
-.sliding.focus h3 {
-  color: white;
-}
-.sliding.focus p {
-  color: rgba(255, 255, 255, 0.5);
-}
-.sliding.divider {
-  min-height: 150px;
-}
-.sliding.divider::before {
-  height: 150px;
-}
-.sliding.divider::after {
-  top: 150px;
-}
-
 /*
 *
 */
@@ -690,16 +597,6 @@ nav ul img {
   margin: 0;
   text-align: left;
   font-size: small;
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media print,
-  (-o-min-device-pixel-ratio: 5/4),
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 120dpi) {
 }
 
 /* ==========================================================================
@@ -762,71 +659,4 @@ nav ul img {
 
 .clearfix {
   *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: ' (' attr(href) ')';
-  }
-
-  abbr[title]:after {
-    content: ' (' attr(title) ')';
-  }
-
-  .ir a:after,
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
-    content: '';
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
 }
