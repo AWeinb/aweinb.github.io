@@ -1,0 +1,22 @@
+section {
+  width: 80%;
+  margin: auto;
+}
+
+.description {
+}
+
+.image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.image > * {
+  flex-basis: 45%;
+  margin: 10px;
+}
+
+.image img {
+  width: 100%;
+}
