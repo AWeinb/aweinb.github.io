@@ -386,6 +386,7 @@ nav ul img {
 .page-block img {
   max-width: 800px;
   max-height: 800px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -393,8 +394,15 @@ nav ul img {
     flex-direction: column;
   }
   .page-block img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .page-block img {
+    max-height: 400px;
+    max-width: 100%;
   }
 }
 
